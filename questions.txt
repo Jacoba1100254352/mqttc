@@ -1,0 +1,16 @@
+MQTT Quality of Service (QoS) Levels:
+    QoS 0 - At most once: Quick, doesn't confirm if messages are received. Use it when it's okay if some messages are missed.
+    QoS 1 - At least once: Makes sure messages get there but might send duplicates. Good for when missing a message is a problem but getting the same one twice is fine.
+    QoS 2 - Exactly once: The most reliable, ensures each message is received only once. Best for important stuff where you can’t have duplicates or miss messages, like in banking.
+MQTT and TCP:
+    MQTT uses TCP, but it still has its own QoS because TCP only ensures data packets are delivered. MQTT's QoS lets you decide how messages are managed, which is more specific and useful for different scenarios, like when you can't afford to lose or duplicate messages.
+Pros and Cons of MQTT:
+    Pros:
+        Good for Weak Networks: Works well in places with bad internet.
+        Lightweight: Doesn’t require much power or data, great for small devices.
+    Cons:
+        Security: Not very secure on its own.
+        Gets Complicated in Big Systems: Managing a lot of devices with MQTT can be tricky.
+Commercial Products Using MQTT:
+    Smart Home Devices: They use MQTT for quick communication between devices. It's chosen for its speed and efficiency, which is perfect for gadgets that need to respond fast and use less power.
+    Automotive Telematics Systems: Cars use it to send data like location. It’s great in situations where you might have weak or no internet, like when driving around.
